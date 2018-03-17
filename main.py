@@ -67,11 +67,12 @@ table_str = table.table
 with codecs.open(md_file_name, "w", "utf-8") as f:
     now = datetime.datetime.now()
     f.write("# Top %s Github repositories\n" % p["search"])
+    f.write("Based on [Top Deep Learning](http://github.com/mbadry1/Top-Deep-Learning)<br /><br />\n")
     f.write("Here is a list of the top-%s %s Github repositories sorted by the number of stars.\n" % (p["items"], p["search"]))
     f.write("The query that has been used for the GitHub search API is \"%s" % p["search"] + "\".\n")
     f.write("<br /><br />\n")
     f.write("Date: %s\n" % now.strftime("%m/%d/%Y"))
     f.write("<br /><br />\n")
     f.write("Note: This listing will be updated regularly.\n")
-    f.write("<br /><br />\n")
+    f.write("<br /><br />\n\n")
     f.write(table_str)
